@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$primaryColor: rgb(93, 255, 156);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+.container {
+  width: 90%;
+}
+
+.first-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .header {
+    flex-basis: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .container {
+      height: 100%;
+      display: flex;
+      .logo {
+        flex-basis: 50%;
+        // background-color: rosybrown;
+        display: flex;
+        align-items: center;
+        h1 {
+          cursor: pointer;
+          font-size: 1.5em;
+          span {
+            color: $primaryColor;
+          }
+        }
+      }
+      .nav-item {
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        a {
+          text-decoration: none;
+          color: black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .container {
+    flex-basis: 90%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    .content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        span {
+          color: $primaryColor;
+        }
+      }
+      p {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      button {
+        border: 0;
+        width: 150px;
+        padding: 15px;
+        border-radius: 500px;
+        // font-size: 1.1em;
+        font-weight: 500;
+        color: white;
+        background-color: $primaryColor;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        &:focus {
+          border: 0;
+        }
+        &:hover {
+          box-shadow: 1px 3px 15px rgba(93, 255, 156, 0.8);
+        }
+      }
+    }
+    .illustration {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 80%;
+        width: 80%;
+        object-fit: fill;
+      }
+    }
+  }
+}
